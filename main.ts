@@ -1,6 +1,6 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    music.play(music.stringPlayable("C5 B A G F E D C ", 100), music.PlaybackMode.InBackground)
-    basic.showString("shake")
+    music.play(music.stringPlayable("C D E F G A B C5 ", 100), music.PlaybackMode.InBackground)
+    basic.showString("stop")
     basic.showLeds(`
         . . . . .
         . . . . .
