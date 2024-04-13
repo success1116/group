@@ -1,3 +1,15 @@
+radio.onReceivedNumber(function (receivedNumber) {
+    music.play(music.stringPlayable("C5 B A G F E D C ", 100), music.PlaybackMode.InBackground)
+    basic.showString("shake")
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+    radio.setGroup(0)
+})
 input.onButtonPressed(Button.A, function () {
     radio.setGroup(5)
     basic.showString("5")
@@ -14,7 +26,7 @@ input.onButtonPressed(Button.AB, function () {
     radio.setGroup(0)
 })
 radio.onReceivedString(function (receivedString) {
-    music.play(music.stringPlayable(receivedString, 100), music.PlaybackMode.InBackground)
+    music.play(music.stringPlayable("C5 B A G F E D C ", 100), music.PlaybackMode.InBackground)
     basic.showString(receivedString)
     basic.showLeds(`
         . . . . .
